@@ -29,6 +29,12 @@ which cobc
 ```
 This should be the version '/usr/local/bin/cobc' but if it isn't, replace 'cobc' in the command lines to compile with '/usr/local/bin/cobc'.
 
+## Setup notes
+
+To progress on Linux (Ubuntu), the following links are helpful:
+https://learningcobol.wordpress.com/2018/05/04/how-to-install-gnucobol-2-2-0-on-ubuntu/ for ldconfig step
+
+
 ## Setting up data
 
 First compile the data importer:
