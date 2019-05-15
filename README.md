@@ -33,6 +33,7 @@ This should be the version '/usr/local/bin/cobc' but if it isn't, replace 'cobc'
 
 To progress on Linux (Ubuntu), the following links are helpful:
 https://learningcobol.wordpress.com/2018/05/04/how-to-install-gnucobol-2-2-0-on-ubuntu/ for ldconfig step
+https://stackoverflow.com/questions/25104335/configure-error-gmp-h-gmp-is-required for installing libgmp3-dev and libdb-dev
 
 
 ## Setting up data
