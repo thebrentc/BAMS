@@ -1,0 +1,43 @@
+from ubuntu:18.04
+
+maintainer Brent C <thebrentc@gmail.com>
+
+ 
+
+#update and get pre-requisites
+
+run apt-get update
+
+#run apt-get install -y open-cobol
+
+run apt-get install -y gcc
+
+run apt-get install -y libgmp3-dev libdb-dev
+
+run apt-get update && apt-get install -y make
+
+copy gnucobol-2.2.tar.gz /gnucobol-2.2.tar.gz
+
+run tar -xzvf gnucobol-2.2.tar.gz \
+&& cd gnucobol-2.2 \
+&& ./configure --with-curses=check --prefix=/usr/local CPPFLAGS=-I/usr/local/include/ LDFLAGS=-L/usr/local/lib \
+&& make \
+&& make install
+
+run ldconfig
+
+#copy in the source file
+
+copy helloworld.cbl /helloworld.cbl
+
+ 
+
+#compile the code
+
+run cobc -x -free -o helloworld helloworld.cbl
+
+ 
+
+#run the compiled program
+
+cmd ["/helloworld"]
