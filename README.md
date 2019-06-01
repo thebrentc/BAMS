@@ -32,8 +32,11 @@ This should be the version '/usr/local/bin/cobc' but if it isn't, replace 'cobc'
 ## Setup notes
 
 To progress on Linux (Ubuntu), the following links are helpful:
-https://learningcobol.wordpress.com/2018/05/04/how-to-install-gnucobol-2-2-0-on-ubuntu/ for ldconfig step
 https://stackoverflow.com/questions/25104335/configure-error-gmp-h-gmp-is-required for installing libgmp3-dev and libdb-dev
+Also install make if necessary
+Check ncurses: apt search ncurses | grep "installed". Possibly install libncurses-dev.
+https://learningcobol.wordpress.com/2018/05/04/how-to-install-gnucobol-2-2-0-on-ubuntu/ for ldconfig step
+See setup-cobol.sh
 
 
 ## Setting up data
@@ -66,7 +69,7 @@ or optionally with a specific data file:
  ./bams path/to/data-file.dat
  ```
 
-If you find that the function keys don't seem to do what they should, check that they haven't been captured by your window manager or terminal emulator. For example in MATE terminal, F10 brings up the emulator menu so you can't exit the application.
+If you find that the function keys don't seem to do what they should, check that they haven't been captured by your window manager or terminal emulator. For example in MATE terminal, F10 brings up the emulator menu so you can't exit the application. To fix try: Windows (super) key + F10 to open Application menu: Preferences, untick "Enable the menu accelerator key (F10 by default)" (cf. https://askubuntu.com/questions/103200/unbinding-f10-on-a-terminal).
 
 # Using BAMS
 
